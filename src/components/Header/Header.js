@@ -9,19 +9,24 @@ import MobileLogo from "./Logo/MobileLogo";
 import MyMenu from "./Menu/MyMenu";
 import MobileMenu from "./Menu/MobileMenu";
 import UserBlock from "./UserBlock/UserBlock";
+import Box from "@mui/material/Box";
 
 const Header = () => {
     return (
         <AppBar position="static">
             <Container maxWidth="xl">
                 <Toolbar disableGutters style={{justifyContent: 'space-between'}}>
+
+                    <Box sx={{ flexGrow: 1, display: 'flex', justifyConten: 'center', alignItems: 'center' }}>
                         <MyLogo/>
 
                         <MobileMenu/>
                         <MobileLogo/>
 
                         <MyMenu/>
-                        <UserBlock/>
+                    </Box>
+
+                    <UserBlock/>
 
 
 
