@@ -26,7 +26,6 @@ const MyMenu = () => {
 
 
     return (
-        <Box style={{display: 'flex'}}>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                 {pages.map((page) => (
                     <Link key={page.title} to={page.url} style = {{ my: 2, color: 'white', display: 'block', padding: '10px' }}>
@@ -37,7 +36,7 @@ const MyMenu = () => {
 
                 ))}
             </Box>
-        </Box>
+
     );
 }
 

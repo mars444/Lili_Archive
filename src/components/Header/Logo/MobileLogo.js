@@ -6,14 +6,13 @@ const MobileLogo = () => {
 
     return (
         <Box sx ={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <AddLocationRoundedIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+            <AddLocationRoundedIcon sx={{ display: { xs: 'flex', md: 'none' }}} />
             <Typography
                 variant="h6"
                 noWrap
                 component="a"
                 href=""
                 sx={{
-                    mr: 2,
                     display: { xs: 'flex', md: 'none' },
                     flexGrow: 1,
                     fontFamily: 'monospace',

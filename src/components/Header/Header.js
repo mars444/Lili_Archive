@@ -10,23 +10,30 @@ import MyMenu from "./Menu/MyMenu";
 import MobileMenu from "./Menu/MobileMenu";
 import UserBlock from "./UserBlock/UserBlock";
 import Box from "@mui/material/Box";
+import Contacts from "./Contacts/Contacts";
 
 const Header = () => {
     return (
-        <AppBar position="static">
+        <AppBar position="static" >
             <Container maxWidth="xl">
                 <Toolbar disableGutters style={{justifyContent: 'space-between'}}>
-
-                    <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center' }}>
-                        <MyLogo/>
 
                         <MobileMenu/>
                         <MobileLogo/>
 
+                    <Box sx={{  display: 'flex', alignItems: 'center' }}>
+                        <MyLogo/>
                         <MyMenu/>
                     </Box>
 
-                    <UserBlock/>
+                    <Box sx={{  display: 'flex', alignItems: 'center' }}>
+                        <Contacts/>
+                    </Box>
+
+
+
+
+
 
 
 
