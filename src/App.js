@@ -8,6 +8,8 @@ import MainPage from "./pages/MainPage";
 import aboutPage from "./pages/AboutPage";
 import Page3 from "./pages/Page3";
 import Header from "./components/Header/Header";
+import Profile from "./pages/Profile";
+import AuthPage from "./pages/AuthPage";
 
 
 function App() {
@@ -26,6 +28,14 @@ function App() {
         {
             path: "/about",
             Component: Page3,
+        },
+        {
+            path: "/profile",
+            Component: Profile,
+        },
+        {
+            path: "/auth",
+            Component: AuthPage,
         },
 
     ];

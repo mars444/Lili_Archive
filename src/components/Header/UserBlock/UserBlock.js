@@ -6,8 +6,13 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import {Link} from "react-router-dom";
 
-const settings = ['Профиль', 'Настройки', 'Выйти'];
+
+const settings = [
+    {url:'/profile', title: 'Профиль'},
+    {url:'/auth', title: 'Выйти'},
+];
 
 const UserBlock = () => {
 
@@ -47,8 +52,13 @@ const UserBlock = () => {
                     onClose={handleCloseUserMenu}
                 >
                     {settings.map((setting) => (
-                        <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                            <Typography textAlign="center">{setting}</Typography>
+                        <MenuItem key={setting.title} onClick={handleCloseUserMenu}>
+
+
+                            <Link to={setting.url}>
+                                <Typography textAlign="center"> {setting.title} </Typography>
+
+                            </Link>
                         </MenuItem>
                     ))}
                 </Menu>
