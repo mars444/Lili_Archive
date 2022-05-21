@@ -5,10 +5,7 @@ import Box from '@mui/material/Box';
 const MobileLogo = () => {
 
     return (
-        <Box style={{
-            display: 'flex',
-
-        }}>
+        <Box sx ={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <AddLocationRoundedIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
             <Typography
                 variant="h6"

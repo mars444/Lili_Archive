@@ -52,14 +52,13 @@ const UserBlock = () => {
                     onClose={handleCloseUserMenu}
                 >
                     {settings.map((setting) => (
-                        <MenuItem key={setting.title} onClick={handleCloseUserMenu}>
 
-
-                            <Link to={setting.url}>
-                                <Typography textAlign="center"> {setting.title} </Typography>
-
+                            <Link to={setting.url} key={setting.title}>
+                                <MenuItem  onClick={handleCloseUserMenu}>
+                                    <Typography textAlign="center"> {setting.title} </Typography>
+                                </MenuItem>
                             </Link>
-                        </MenuItem>
+
                     ))}
                 </Menu>
             </Box>

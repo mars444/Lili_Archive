@@ -28,7 +28,7 @@ const MobileMenu = () => {
 
 
     return (
-        <Box>
+        <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                 <IconButton
                     size="large"
@@ -61,13 +61,14 @@ const MobileMenu = () => {
                     }}
                 >
                     {pages.map((page) => (
-                        <MenuItem key={page.title} onClick={handleCloseNavMenu}>
-                            <Link to={page.url}>
-                                <Typography textAlign="center"> {page.title} </Typography>
 
+                            <Link key={page.title} to={page.url}>
+                                <MenuItem  onClick={handleCloseNavMenu}>
+                                    <Typography textAlign="center"> {page.title} </Typography>
+                                </MenuItem>
                             </Link>
 
-                        </MenuItem>
+
                     ))}
                 </Menu>
             </Box>
