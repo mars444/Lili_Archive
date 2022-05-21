@@ -1,12 +1,49 @@
+
+import {
+    HashRouter as Router,
+    Switch,
+    Route,
+} from "react-router-dom";
+import MainPage from "./pages/MainPage";
+import aboutPage from "./pages/AboutPage";
+import Page3 from "./pages/Page3";
 import Header from "./components/Header/Header";
-import {Avatar} from "@mui/material";
 
 
 function App() {
+
+
+    const appRoutes = [
+        {
+            path: '/',
+            Component: MainPage,
+            exact: true,
+        },
+        {
+            path: "/galery",
+            Component: aboutPage,
+        },
+        {
+            path: "/about",
+            Component: Page3,
+        },
+
+    ];
+
+
   return (
-    <div className="">
-        <Header/>
-    </div>
+      <Router>
+            <Header/>
+
+              <Switch>
+                  {appRoutes.map(({path, Component, exact},index) => {
+
+                      return <Route key={index}  path={path} exact={exact} component={Component}/>
+                  })}
+              </Switch>
+
+      </Router>
+
   );
 }
 

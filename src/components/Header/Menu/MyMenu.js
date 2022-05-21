@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 import Box from "@mui/material/Box";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import Typography from "@mui/material/Typography";
-import AdbIcon from "@mui/icons-material/Adb";
-import Button from "@mui/material/Button";
 
-const pages = ['Главная', 'Галерея', 'Работы', 'Напишите нам', 'Наш адрес', 'Цены'];
+import Button from "@mui/material/Button";
+import {
+    Link
+} from "react-router-dom";
+
+const pages = [
+    {url:'/', title: 'Главная'},
+    {url:'/galery', title: 'Галерея'},
+    {url:'/about', title: 'О нас'},
+];
 
 const MyMenu = () => {
 
@@ -23,19 +26,18 @@ const MyMenu = () => {
 
 
     return (
-        <div style={{display: 'flex'}}>
+        <Box style={{display: 'flex'}}>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                 {pages.map((page) => (
-                    <Button
-                        key={page}
-                        onClick={handleCloseNavMenu}
-                        sx={{ my: 2, color: 'white', display: 'block' }}
-                    >
-                        {page}
-                    </Button>
+                    <Link to={page.url} style = {{ my: 2, color: 'white', display: 'block', padding: '10px' }}>
+
+                            {page.title}
+
+                    </Link>
+
                 ))}
             </Box>
-        </div>
+        </Box>
     );
 }
 

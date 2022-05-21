@@ -1,11 +1,11 @@
 import React from 'react';
 import Typography from "@mui/material/Typography";
 import AddLocationRoundedIcon from "@mui/icons-material/AddLocationRounded";
-
+import Box from '@mui/material/Box';
 const MobileLogo = () => {
 
     return (
-        <div style={{
+        <Box style={{
             display: 'flex',
 
         }}>
@@ -28,7 +28,7 @@ const MobileLogo = () => {
             >
                 Альс Дент
             </Typography>
-        </div>
+        </Box>
     );
 };
 

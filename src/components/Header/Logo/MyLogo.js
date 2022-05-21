@@ -1,10 +1,10 @@
 import React from 'react';
 import AddLocationRoundedIcon from "@mui/icons-material/AddLocationRounded";
 import Typography from "@mui/material/Typography";
-
+import Box from '@mui/material/Box';
 const MyLogo = () => {
     return (
-        <div style={{display: 'flex'}}>
+        <Box style={{display: 'flex'}}>
             <AddLocationRoundedIcon  sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
             <Typography
                 variant="h6"
@@ -22,7 +22,7 @@ const MyLogo = () => {
             >
                 Альс Дент
             </Typography>
-        </div>
+        </Box>
     );
 };
 

@@ -5,8 +5,14 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import {Link} from "react-router-dom";
+import Button from "@mui/material/Button";
 
-const pages = ['Главная', 'Галерея', 'Работы', 'Напишите нам', 'Наш адрес', 'Цены'];
+const pages = [
+    {url:'/', title: 'Главная'},
+    {url:'/galery', title: 'Галерея'},
+    {url:'/about', title: 'О нас'},
+];
 
 const MobileMenu = () => {
 
@@ -22,7 +28,7 @@ const MobileMenu = () => {
 
 
     return (
-        <div>
+        <Box>
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                 <IconButton
                     size="large"
@@ -55,13 +61,17 @@ const MobileMenu = () => {
                     }}
                 >
                     {pages.map((page) => (
-                        <MenuItem key={page} onClick={handleCloseNavMenu}>
-                            <Typography textAlign="center">{page}</Typography>
+                        <MenuItem key={page.title} onClick={handleCloseNavMenu}>
+                            <Link to={page.url}>
+                                <Typography textAlign="center"> {page.title} </Typography>
+
+                            </Link>
+
                         </MenuItem>
                     ))}
                 </Menu>
             </Box>
-        </div>
+        </Box>
     );
 };
 
