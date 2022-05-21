@@ -1,10 +1,11 @@
+import Header from "./components/Header/Header";
+import {Avatar} from "@mui/material";
 
-import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      Руддщ
+    <div className="">
+        <Header/>
     </div>
   );
 }
