@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import Box from '@mui/material/Box';
 const MyLogo = () => {
     return (
-        <Box style={{display: 'flex'}}>
+        <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             <AddLocationRoundedIcon  sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
             <Typography
                 variant="h6"

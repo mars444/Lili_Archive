@@ -8,7 +8,7 @@ import Box from "@mui/material/Box";
 
 const Contacts = () => {
     return (
-        <div>
+
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
                 <IconButton
                     href="tel:+79031199353"
@@ -19,8 +19,6 @@ const Contacts = () => {
                 </IconButton>
 
             </Box>
-
-        </div>
     );
 };
 

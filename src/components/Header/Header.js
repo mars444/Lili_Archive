@@ -21,7 +21,7 @@ const Header = () => {
                         <MobileMenu/>
                         <MobileLogo/>
 
-                    <Box sx={{  display: 'flex', alignItems: 'center' }}>
+                    <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                         <MyLogo/>
                         <MyMenu/>
                     </Box>
