@@ -17,7 +17,7 @@ const Header = () => {
             <Container maxWidth="xl">
                 <Toolbar disableGutters style={{justifyContent: 'space-between'}}>
 
-                    <Box sx={{ flexGrow: 1, display: 'flex', justifyConten: 'center', alignItems: 'center' }}>
+                    <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center' }}>
                         <MyLogo/>
 
                         <MobileMenu/>
