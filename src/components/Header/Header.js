@@ -28,13 +28,8 @@ const Header = () => {
 
                     <Box sx={{  display: 'flex', alignItems: 'center' }}>
                         <Contacts/>
+                    {/*<UserBlock/>*/}
                     </Box>
-
-
-
-
-
-
 
 
                 </Toolbar>
