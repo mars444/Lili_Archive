@@ -16,17 +16,21 @@ const Header = () => {
     return (
         <AppBar position="static" >
             <Container maxWidth="xl">
-                <Toolbar disableGutters style={{justifyContent: 'space-between'}}>
+                <Toolbar disableGutters sx={{
+                    display: { xs: 'grid', md: 'flex' },
+                    gridTemplateColumns: { xs: '1fr auto 1fr'},
+                    justifyContent: 'space-between'
+                }}>
 
-                        <MobileMenu/>
-                        <MobileLogo/>
+                        <MobileMenu />
+                        <MobileLogo />
 
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                         <MyLogo/>
                         <MyMenu/>
                     </Box>
 
-                    <Box sx={{  display: 'flex', alignItems: 'center' }}>
+                    <Box sx={{  display: 'flex', alignItems: 'right', justifyContent: 'right' }}>
                         <Contacts/>
                     <UserBlock/>
                     </Box>
