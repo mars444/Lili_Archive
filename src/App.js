@@ -10,6 +10,7 @@ import Page3 from "./pages/Page3";
 import Header from "./components/Header/Header";
 import Profile from "./pages/Profile";
 import AuthPage from "./pages/AuthPage";
+import IconBreadcrumbs from "./components/NavigationPath/NavigationPath";
 
 
 function App() {
@@ -44,6 +45,8 @@ function App() {
   return (
       <Router>
             <Header/>
+
+            <IconBreadcrumbs/>
 
               <Switch>
                   {appRoutes.map(({path, Component, exact},index) => {
