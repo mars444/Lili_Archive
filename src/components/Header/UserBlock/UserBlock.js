@@ -28,7 +28,7 @@ export default function UserBlock() {
         setAnchorEl(null);
     };
     return (
-        <React.Fragment>
+        <Box sx={{  display: { xs: 'none', md: 'block' } }}>
             <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
                 <Tooltip title="Account settings">
                     <IconButton
@@ -100,6 +100,6 @@ export default function UserBlock() {
                     </Link>
                 ))}
             </Menu>
-        </React.Fragment>
+        </Box>
     );
 }
