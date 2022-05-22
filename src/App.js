@@ -46,7 +46,7 @@ function App() {
       <Router>
             <Header/>
 
-            <IconBreadcrumbs/>
+            {/*<IconBreadcrumbs/>*/}
 
               <Switch>
                   {appRoutes.map(({path, Component, exact},index) => {
