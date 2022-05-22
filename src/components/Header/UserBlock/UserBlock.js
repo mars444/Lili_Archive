@@ -14,9 +14,9 @@ import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
 import {Link} from 'react-router-dom'
 
-const settings = [
-    {url:'/profile', title: 'Профиль'},
-    {url:'/auth', title: 'Выйти'},
+const settingsItems = [
+    {url:'/settings', title: 'Настройки', icon: <Settings/>},
+    {url:'/settings', title: 'Выйти', icon: <Logout/>},
 ];
 
 export default function UserBlock() {
@@ -89,24 +89,17 @@ export default function UserBlock() {
 
                 <Divider />
 
-                <Link to='/profile'>
-                    <MenuItem>
-                        <ListItemIcon>
-                            <Settings fontSize="small" />
-                        </ListItemIcon>
-                        Settings
-                    </MenuItem>
-                </Link>
 
-                <Link to='/profile'>
-                    <MenuItem>
-                        <ListItemIcon>
-                            <Logout fontSize="small" />
-                        </ListItemIcon>
-                        Logout
-                    </MenuItem>
-                </Link>
+                {settingsItems.map((item) => (
 
+                    <Link key={item.title} to={item.url}>
+                        <MenuItem>
+                            <ListItemIcon children={item.icon}>
+                            </ListItemIcon>
+                            {item.title}
+                        </MenuItem>
+                    </Link>
+                ))}
             </Menu>
         </React.Fragment>
     );
