@@ -23,3 +23,9 @@ img {
   /*избавляемся от лишнего отступа в 3 px внизу блока с картинкой*/
 
 }
+.p-menubar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0px !important;
+}
