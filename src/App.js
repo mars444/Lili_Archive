@@ -4,13 +4,14 @@ import {
     Switch,
     Route,
 } from "react-router-dom";
+
+import {Button} from "primereact/button";
 import MainPage from "./pages/MainPage";
-import aboutPage from "./pages/AboutPage";
+import aboutPage from "./pages/GaleryPage";
 import Page3 from "./pages/Page3";
-import Header from "./components/Header/Header";
 import Profile from "./pages/Profile";
 import AuthPage from "./pages/AuthPage";
-import IconBreadcrumbs from "./components/NavigationPath/NavigationPath";
+
 
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
             exact: true,
         },
         {
-            path: "/galery",
+            path: "/gallery",
             Component: aboutPage,
         },
         {
@@ -44,10 +45,7 @@ function App() {
 
   return (
       <Router>
-            <Header/>
-
-            {/*<IconBreadcrumbs/>*/}
-
+                <Button label={'grewgrewg'}/>
               <Switch>
                   {appRoutes.map(({path, Component, exact},index) => {
 

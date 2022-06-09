@@ -1,9 +1,5 @@
 import React from 'react';
 import BeforeAfterCard from "../BeforeAfterCard/BeforeAfterCard";
-import Box from "@mui/material/Box";
-import {Link} from "react-router-dom";
-import MenuItem from "@mui/material/MenuItem";
-import Typography from "@mui/material/Typography";
 
 const images = [
     {
@@ -59,11 +55,7 @@ const images = [
 
 const BeforeAfterBox = () => {
     return (
-        <Box sx={{
-            display:'grid',
-            gridTemplateColumns: '1fr 1fr 1fr',
-            gridGap: '30px',
-        }}>
+        <div>
             {images.map((item,index) =>  {
                    return <BeforeAfterCard
                             key={index}
@@ -74,8 +66,7 @@ const BeforeAfterBox = () => {
 
             )}
 
-
-        </Box>
+        </div>
     );
 };
 
