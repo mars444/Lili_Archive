@@ -24,7 +24,7 @@ const MainPage = () => {
     return (
         <div>
 
-            <div maxWidth="xl" >
+            <div>
 
                 <div>
                     <YMaps
